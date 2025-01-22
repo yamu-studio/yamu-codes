@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello World!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせフォーム</title>
+    <!-- 自作CSSを使う -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- CSSフレームワークを使う -->
+    <!-- ・通常版 -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> -->
+    <!-- ・ライトテーマのみ版 -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.css"> -->
+  </head>
+
+  <body>
+    <div class="section">
+      <div class="container">
+        <form class="box" id="contactForm">
+          <div class="field">
+            <label class="label"
+              >お名前
+              <span style="color: red">*</span>
+            </label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="田中 太郎"
+                required
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >メールアドレス
+              <span style="color: red">*</span>
+            </label>
+            <div class="control">
+              <input
+                class="input"
+                type="email"
+                placeholder="example@gmail.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">電話番号</label>
+            <div class="control">
+              <input class="input" type="tel" placeholder="012-3456-7890" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >お問い合わせ内容
+              <span style="color: red">*</span>
+            </label>
+            <div class="control">
+              <div class="select">
+                <select required>
+                  <option value="製品について">製品について</option>
+                  <option value="商品について">商品について</option>
+                  <option value="なんとなく">なんとなく</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >お問い合わせ詳細
+              <span style="color: red">*</span>
+            </label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                cols="30"
+                rows="5"
+                placeholder="お問い合わせの詳細を記入してください"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >送信前の確認
+              <span style="color: red">*</span>
+            </label>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" id="checkPrivacy" />
+                <a href="">プライバシーポリシー</a>
+                に同意する
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >もひとつ確認
+              <span style="color: red">*</span>
+            </label>
+            <p class="help">
+              ご回答までに最低でも1営業日ほどいただきますがよろしいでしょうか？
+            </p>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="question" value="yes" /> Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="question" value="no" checked /> No
+              </label>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="button is-primary" type="submit">送信する</button>
+            <button class="button is-link is-light" type="reset">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScriptファイルを使う -->
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>
